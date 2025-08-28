@@ -1,0 +1,14 @@
+pluginManagement {
+    plugins {
+        id 'io.spring.dependency-management' version "$springDependencyManagementVersion"
+    }
+}
+
+rootProject.name = 'dddmolecules'
+
+include 'dddmolecules-api'
+include 'dddmolecules-aop'
+include 'dddmolecules-spring-boot-starter'
+include 'examples'
+include 'examples:aop-example'
+include 'examples:simple-example'

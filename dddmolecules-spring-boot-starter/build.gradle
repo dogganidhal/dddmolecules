@@ -1,0 +1,38 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+dependencies {
+    implementation project(':dddmolecules-api')
+
+    implementation 'org.slf4j:slf4j-api'
+
+    implementation 'org.springframework:spring-tx'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}
+
+//publishing {
+//    publications {
+//        dddmolecules(MavenPublication) {
+////            groupId = project.groupId
+//            artifactId = project.name
+////            version = project.ve
+//
+//            from components.java
+//        }
+//    }
+//
+//    repositories {
+//        maven {
+//            url = layout.buildDirectory.dir("publishing-repository")
+//        }
+//    }
+//}
+
+apply {
+    from '../publish.gradle'
+}
