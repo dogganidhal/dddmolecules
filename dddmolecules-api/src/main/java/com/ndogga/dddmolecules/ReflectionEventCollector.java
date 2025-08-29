@@ -7,8 +7,7 @@ import java.util.List;
 
 /**
  * Implementation of DomainEventCollector that uses reflection to find
- *
- * @DomainEvents and @AfterDomainEventPublication annotated methods.
+ * `@DomainEvents` and `@AfterDomainEventPublication` annotated methods.
  * <p>
  * This provides a Spring Data JPA-like experience for domain event publishing
  * without depending on Spring Data.
@@ -59,6 +58,7 @@ public abstract class ReflectionEventCollector implements DomainEventCollector {
     /**
      * Abstract method to be implemented by concrete classes to actually publish events.
      * This allows for different publishing mechanisms (sync, async, message queue, etc.)
+     * @param events the list of domain events to publish
      */
     protected abstract void publishEvents(List<Object> events);
 

@@ -3,6 +3,10 @@ plugins {
     id 'maven-publish'
 }
 
+java {
+    withSourcesJar()
+}
+
 dependencies {
     implementation project(':dddmolecules-api')
 
@@ -15,24 +19,4 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 }
 
-//publishing {
-//    publications {
-//        dddmolecules(MavenPublication) {
-////            groupId = project.groupId
-//            artifactId = project.name
-////            version = project.ve
-//
-//            from components.java
-//        }
-//    }
-//
-//    repositories {
-//        maven {
-//            url = layout.buildDirectory.dir("publishing-repository")
-//        }
-//    }
-//}
-
-apply {
-    from '../publish.gradle'
-}
+apply { from '../publish.gradle' }

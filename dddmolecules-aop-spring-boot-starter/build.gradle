@@ -9,9 +9,12 @@ java {
 
 dependencies {
     implementation project(':dddmolecules-api')
+    implementation project(':dddmolecules-aop')
 
     implementation 'org.slf4j:slf4j-api'
-    implementation 'org.aspectj:aspectjweaver'
+
+    implementation 'org.springframework:spring-tx'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
