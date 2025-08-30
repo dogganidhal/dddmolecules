@@ -9,6 +9,7 @@ java {
 
 dependencies {
     implementation project(':dddmolecules-api')
+    implementation project(':dddmolecules-spring-boot-starter')
 
     implementation 'org.slf4j:slf4j-api'
     implementation 'org.aspectj:aspectjweaver'

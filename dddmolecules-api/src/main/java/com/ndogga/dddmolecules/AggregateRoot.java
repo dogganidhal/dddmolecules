@@ -9,6 +9,7 @@ import java.util.List;
  * This provides the mechanism for collecting events without depending on infrastructure.
  * @param <ID> the aggregate's unique identifier type
  */
+@org.jmolecules.ddd.annotation.AggregateRoot
 public abstract class AggregateRoot<ID> {
     
     private final List<Object> domainEvents = new ArrayList<>();
