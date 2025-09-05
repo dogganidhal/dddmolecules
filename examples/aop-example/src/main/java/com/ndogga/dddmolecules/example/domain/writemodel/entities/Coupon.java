@@ -1,4 +1,4 @@
-package com.ndogga.dddmolecules.example;
+package com.ndogga.dddmolecules.example.domain.writemodel.entities;
 
 public sealed interface Coupon {
 

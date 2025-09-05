@@ -1,7 +1,11 @@
-package com.ndogga.dddmolecules.example;
+package com.ndogga.dddmolecules.example.domain.writemodel.entities;
 
 
 import com.ndogga.dddmolecules.AggregateRoot;
+import com.ndogga.dddmolecules.example.domain.writemodel.commands.ConfirmPaymentCommand;
+import com.ndogga.dddmolecules.example.domain.writemodel.commands.PlaceOrderCommand;
+import com.ndogga.dddmolecules.example.domain.sharedmodel.events.OrderPaymentConfirmedEvent;
+import com.ndogga.dddmolecules.example.domain.sharedmodel.events.OrderPlacedEvent;
 import jakarta.annotation.Nullable;
 import lombok.Getter;
 import org.jmolecules.architecture.cqrs.CommandHandler;
@@ -14,11 +18,13 @@ public class Order extends AggregateRoot<String> {
     @Getter
     private final String id;
     private final String customerId;
+    @Getter
     private final Collection<OrderLine> lines;
     @Nullable
     private final Coupon coupon;
     private final double totalPrice;
 
+    @Getter
     private OrderStatus status;
 
     @CommandHandler

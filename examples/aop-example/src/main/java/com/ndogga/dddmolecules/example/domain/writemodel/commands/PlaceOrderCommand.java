@@ -1,6 +1,8 @@
-package com.ndogga.dddmolecules.example;
+package com.ndogga.dddmolecules.example.domain.writemodel.commands;
 
 
+import com.ndogga.dddmolecules.example.domain.writemodel.entities.Coupon;
+import com.ndogga.dddmolecules.example.domain.writemodel.entities.OrderLine;
 import org.jmolecules.architecture.cqrs.Command;
 
 import java.util.Collection;

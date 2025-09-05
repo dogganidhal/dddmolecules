@@ -88,7 +88,7 @@ public abstract class ReflectionEventCollector implements DomainEventCollector {
     }
 
     private void callAfterDomainEventPublication(Object aggregate) {
-        Method[] methods = aggregate.getClass().getDeclaredMethods();
+        Method[] methods = aggregate.getClass().getMethods();
 
         for (Method method : methods) {
             if (method.isAnnotationPresent(AfterDomainEventPublication.class)) {
